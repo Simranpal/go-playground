@@ -4,12 +4,10 @@ import "os"
 
 func main() {
 
-	var s, sp string
-	i := 1
-	for i < len(os.Args) {
-		s += sp + os.Args[i]
+	s, sp := "", ""
+	for _, arg := range os.Args[1:] {
+		s += sp + arg
 		sp = " "
 	}
-	i++
 	println(s)
 }
