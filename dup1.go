@@ -7,10 +7,9 @@ import (
 	"os"
 )
 
-var countmap map[string]int
-
 func main() {
-	countmap := make(map[string]int)
+	var countmap map[string]int
+	countmap = make(map[string]int)
 	input := bufio.NewScanner(os.Stdin)
 	//fetch each line
 	for input.Scan() {
